@@ -127,6 +127,7 @@
   },
   "defaultProject": "ingresoEgreso",
   "cli": {
-    "analytics": "9022cc7c-86be-45bc-ae3e-74588404fec2"
+    "defaultCollection": "@ngrx/schematics",
+    "analytics": "3d975048-bcd5-4036-be25-fb181c1b8e54"
   }
 }
