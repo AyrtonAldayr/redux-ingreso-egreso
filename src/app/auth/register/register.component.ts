@@ -35,7 +35,6 @@ export class RegisterComponent implements OnInit, OnDestroy {
 
     this.uiSubscription = this.store.select('ui').subscribe(ui => {
       this.cargando = ui.isLoading;
-      console.log('cargando subs RegisterComponent');
     });
   }
   ngOnDestroy() {
@@ -53,7 +52,7 @@ export class RegisterComponent implements OnInit, OnDestroy {
     });*/
     const { nombre, correo, password } = this.registroForm.value;
     this.authService.crearUsuaro(nombre, correo, password).then(credenciales => {
-      console.log(credenciales);
+
       //Swal.close();
       this.store.dispatch(stopLoading());
       this.router.navigate(['/']);

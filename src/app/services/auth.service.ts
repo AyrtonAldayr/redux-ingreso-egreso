@@ -37,7 +37,7 @@ export class AuthService {
             this.store.dispatch(authAction.agregarUsuario({ usuario: usu }));
           });
       } else {
-        console.log('llamar unset del user');
+
         this._usuario = null;
         this.suscripcionUsuario?.unsubscribe();
         this.store.dispatch(authAction.quitarUsuario());
@@ -50,10 +50,10 @@ export class AuthService {
     return this.auth.createUserWithEmailAndPassword(email, password)
       .then(fbUser => {
         const newUser = new Usuario(fbUser.user.uid, nombre, fbUser.user.email);
-        console.log(`${fbUser.user.uid}/usuario`);
+
         return this.firestore.doc(`${fbUser.user.uid}/usuario`)
           .set({ ...newUser }).then(nuevoObjeto => {
-            console.log('nuevoObjeto: ', nuevoObjeto);
+
           });
       });
   }

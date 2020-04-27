@@ -6,10 +6,10 @@ import * as ingresoEgreso from './ingreso-egreso/ingreso-egreso.reducer';
 export interface EstadoGlobalApp {
   ui: ui.State;
   user: auth.State;
-  ingresoEgreso: ingresoEgreso.State;
+  // ingresoEgreso: ingresoEgreso.State;
 }
 export const appReducers: ActionReducerMap<EstadoGlobalApp> = {
   ui: ui.uiReducer,
   user: auth.authReducer,
-  ingresoEgreso: ingresoEgreso.ingresoEgresoReducer,
+  // ingresoEgreso: ingresoEgreso.ingresoEgresoReducer,
 };

@@ -63,7 +63,6 @@ export class IngresoEgresoComponent implements OnInit, OnDestroy {
           timer: 1500
         });
       }).catch((err) => {
-        console.log('IngresoEgresoComponent: ', err);
 
         this.store.dispatch(stopLoading());
         Swal.fire({
